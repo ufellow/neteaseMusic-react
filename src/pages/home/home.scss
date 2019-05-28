@@ -1,0 +1,96 @@
+
+$color: #d43b33;
+$height: 1rem;
+$width: 1rem;
+$delayTime: 0.5s;
+$padding: 0.5rem;
+$lineColor: #c0c0c0;
+@mixin  heightWidth {
+    height:100%;
+    width: 100%;
+}
+@mixin flexAlign($direction,$justifyContent) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+}
+@mixin fontSet($size,$weight) {    
+        font-size: $size;
+        font-weight: $weight;
+}
+@mixin setPosition($top, $right, $bottom, $left) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;    
+}
+a:visited{
+    text-decoration: none;
+    color: inherit;
+  }
+//swiper css
+.swiper-container{
+    padding: 0 $padding; 
+    height: $height*5;
+    .ant-carousel .slick-dots li button{
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+    }
+    .ant-carousel, .slick-slider, .slick-list,img{
+        @include heightWidth();
+    }
+}
+.home-container{  
+    margin-top: 2rem;
+    .home-top-bottom{
+        padding: $padding;
+        @include flexAlign(row, space-between);
+        border-bottom: 0.01rem solid $lineColor;
+        li{
+            color: inherit;
+            margin-right: 0.5rem;
+            @include flexAlign(column, '');
+            text-align: center;
+           .back{
+               background: $color;
+               width: 1.3rem;
+               height: 1.3rem;
+               border-radius: 50%;
+               line-height: 1.3rem;
+               margin-bottom: 0.2rem;
+               .iconfont{
+                    @include fontSet(2em,500 );
+                    color: #fff;
+                }
+                .iconfont:nth-child(3){
+                    @include fontSet(3em,500 );
+                }
+           }          
+        }
+        li:last-child{margin-right: 0}
+    }
+
+    // 推荐歌单
+    .recom-list{
+        padding: $padding;
+        .recom-top{
+            @include flexAlign(row, space-between);
+            text{
+                display: block;
+            }
+            .recom-top-left{
+                @include fontSet(1.2em, 600);
+            }
+            .recom-top-right{
+                border: 0.01rem solid $lineColor;
+                padding: 0.1rem 0.2rem;
+                border-radius: 1.01rem;
+            }
+        }
+        .recom-list-content{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}

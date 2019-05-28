@@ -1,0 +1,33 @@
+$pageColor: #000;
+.player-container{
+    position: relative;
+    padding: 0.5rem;
+    background: $pageColor;
+    width: 100%;
+    .player-controler-container{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        padding: 0.5rem;
+        color: #fff;
+        .player-duration{
+            display: flex;
+            align-items: center;
+            .ant-slider{
+                flex: 1;
+                margin: 0 0.3rem;
+            }
+        }
+        .player-controler{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0 0.5rem;
+            .player-start{
+                font-size: 3em;
+            }
+        }
+       
+    }
+}

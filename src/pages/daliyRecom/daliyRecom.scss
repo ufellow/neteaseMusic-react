@@ -1,0 +1,36 @@
+.recommend-container{
+    .recommend-top{
+        width: 100%;
+        height: 6rem;
+        background-image: url(https://ss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=1055727654,337004439&fm=27&gp=0.jpg)
+        ;position: relative;
+    }
+    .recommend-list{
+        position: absolute;
+        top: 5rem;
+        right: 0;
+        left: 0;
+        background: #fff;
+        border-top-left-radius: 0.5rem;
+        border-top-right-radius: 0.5rem;
+        padding: 0.5rem;
+        box-shadow:   0px -10px 10px #000;
+        .songlist-header{
+            display: flex;
+            justify-content: space-between;
+            margin: 0.5rem 0;
+            margin-top: 0;
+            i{
+                margin-right: 0.2rem;
+            }
+            .bofang-icon{
+                font-size: 1.5em;
+            }
+            .songlist-header-left, .songlist-header-right{
+                display: flex;
+                align-items: center;
+            }
+            
+        }
+    }
+}

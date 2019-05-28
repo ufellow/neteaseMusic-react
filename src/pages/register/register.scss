@@ -1,0 +1,48 @@
+.register-container{
+    margin-top: 5rem;
+    .register-content{
+        background: #fff;
+    }
+    .input-box{
+        width: 60%;
+        margin: 15px auto;
+        border: 1px solid #cccccc;
+        border-radius: 0.1rem;
+        height: 0.8rem;
+        display:flex;
+        align-items: center;
+       .icons{
+           padding: 0.2rem;
+       }
+       input{
+            flex: 1;
+            border: none;
+            height: 100%;
+       }
+       button{
+           border: none;
+           background: lightblue;
+           color: #fff;
+           height: 100%;
+           float: right;
+           padding: .2rem;
+       }
+    }
+    .yanzhengcode{
+       input{
+        width: 50%;
+       }
+    }
+    .submit-box{
+        margin: 0 auto;
+        width: 40%;
+        margin-top: 1rem;
+        button{
+            width: 100%;
+            border: none;
+            padding: 0.1rem;
+            color: #fff;
+            background: lightblue;
+        }
+    }
+}

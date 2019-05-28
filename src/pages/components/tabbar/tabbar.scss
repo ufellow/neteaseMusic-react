@@ -1,0 +1,57 @@
+
+$color: #d43b33;
+$height: 1rem;
+$width: 1rem;
+$padding: 0.5rem;
+
+@mixin flexAlign($direction,$justifyContent) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justifyContent;
+}
+@mixin fontSet($size,$weight) {    
+        font-size: $size;
+        font-weight: $weight;
+}
+@mixin setPosition($top, $right, $bottom, $left) {
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;    
+}
+
+.home-top-container{
+    @include flexAlign(row, space-between );
+    align-items: center;
+    padding: $padding;
+    .side-bar-logo{
+        position: relative;
+        margin-right: 0.5rem;
+        // font-size: 2em;
+        .message-num{
+            background: $color;
+            position: absolute;
+            @include setPosition(-0.3rem, -0.6rem,'' ,'' );
+            color: #fff;   
+            padding: 0.05rem 0.1rem;   
+            border-radius: 0.5rem;          
+        }
+    }
+    .search-icon{
+        margin-left: 0.5rem;
+        // font-size: 2em;
+    }
+    // tab css
+    .tab{
+        flex: 1;
+        @include flexAlign(row,space-between);
+        .tablist{
+            width: 25%;
+            text-align: center;
+            @include fontSet(1em,500);
+        }
+        .tab-active{
+            @include fontSet(1.2em,600);
+        }
+    }
+}

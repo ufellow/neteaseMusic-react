@@ -1,0 +1,24 @@
+.top-navigate-container{
+    padding: 0.5rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    color: #fff;
+    .navigate-left{
+        display: flex;
+        align-items: center;
+        font-size: 1.25em;
+        span{
+            margin-left: 0.5rem;
+            width: 5rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+    }
+    .navigate-right{
+        float: right;
+    }
+}

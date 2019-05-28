@@ -1,0 +1,114 @@
+$color: #d43b33;
+$fontColor: #8c8c8c;
+$height100: 10rem;
+@mixin containerBorder() {
+    background: #fff;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+.songlist-container{
+    width: 100%;
+    @include containerBorder();
+    // padding: 0.5rem;
+  
+   ul{
+       width: 100%;
+       li{
+        width: 100%;
+        display: flex;     
+        justify-content: space-between;     
+        margin-bottom: 0.5rem;
+        margin: 2rem 0;
+           a{
+            display: flex;
+            justify-content: space-between;
+            flex: 0.9;
+           }
+             
+            .song-post{
+                width: 1.5rem;
+                height: 100%;
+                border-radius: 0.3rem;
+            }
+            .song-info{
+                margin: 0.05rem 0;
+                width: 5.1rem;           
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .song-title {
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    font-size: 1.2em;
+                    .song-sub-title{
+                        color: #8c8c8c;
+                    }
+                }
+                .song-description{
+                    font-size: 1em;
+                    color: $fontColor;
+                    .song-type{
+                        border: 1px solid $color;
+                        padding:0 0.1rem;
+                        color: $color;
+                        letter-spacing: 1px;
+                        margin-right: 0.02rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+            .operation-moreinfo{
+                color: $fontColor;
+                width: 1.4rem;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                i{
+                    font-size: 1.8em;
+                }
+            }
+            .song-info-detail-container{
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+                right: 0;
+                z-index: 999;
+                @include containerBorder();
+              .song-info-detail-content{
+                height: $height100;    
+                @include containerBorder();
+                position: fixed;
+                z-index: 999;
+                width: 100%;
+              }
+                    .song-info-detail-enter {
+                        height: 0;
+                    }
+                    .song-info-detail-enter-active {
+                        height: $height100;
+                        transition:  height 500ms linear;      
+                    }
+                    .song-info-detail-enter-done{
+                        height: $height100;
+                        opacity: 1;
+                    }
+                    
+                    .song-info-detail-exit {
+                        height: $height100;
+                        opacity: 1;
+                    }
+                    .song-info-detail-exit-active {
+                        height: 0;
+                        opacity: 0;
+                        transition:  opacity 200ms,height 200ms;
+                    }
+                    .song-info-detail-exit-done{
+                        height: 0;
+                        opacity: 0;
+                    }
+            }
+       }
+   }
+
+}
